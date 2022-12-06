@@ -1,0 +1,213 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.manitor {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.manitor .switcher {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    left: -110%;
+    opacity: 0;
+    top: 0;
+}
+
+.toggle-switcher-animation {
+    animation-name: switcher-animation;
+    animation-duration: 1.5s;
+    animation-fill-mode: none;
+}
+
+.toggle-switcher-animation-reverse {
+    animation-name: switcher-animation;
+    animation-duration: .8s;
+    animation-fill-mode: none;
+    animation-direction: reverse;
+}
+
+.manitor .switcher .color {
+    width: 200%;
+    height: 100%;
+    border-radius: 0px;
+    /* border:2px solid #00000056 ; */
+    margin: 0px auto;
+    background-color: #5697ff;
+}
+
+.papers {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.papers .section {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.papers .section h1 {
+    margin: 0;
+}
+
+#papers-controller {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: -2;
+}
+
+.section#introduction {
+    overflow: hidden;
+    background: #0e203d;
+}
+
+.section#introduction img {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin: 20px auto;
+    display: block;
+    z-index: 1;
+    animation-name: floating-image;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.section#introduction h1 {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+.section#introduction p {
+    width: 80%;
+    text-align: justify;
+    color: white;
+    margin: 20px auto;
+}
+
+.section#skills {
+    overflow: hidden;
+    background: #0e203d;
+    color: white;
+}
+
+.section#skills h1 {
+    text-align: center;
+    margin: 50px;
+}
+
+.section#skills .progressbar {
+    width: 70%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    height: 30px;
+    overflow: hidden;
+    margin: 20px 0;
+    border: 3px solid #00000056;
+}
+
+.section#skills .progressbar p {
+    margin: 8px 0;
+    width: fit-content;
+    position: relative;
+    margin-top: -32px;
+    padding: 10px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: #0000002d;
+}
+
+.section#skills .progressbar .fill {
+    width: 70%;
+    height: 100%;
+    background: yellow;
+}
+
+.section#instagram {
+    overflow: hidden;
+    background: rgb(141, 0, 87);
+    color: white;
+}
+
+.section#instagram img {
+    width: 300px;
+    height: 300px;
+    border-radius: 80px;
+    background: white;
+    transform: rotate(40deg);
+    opacity: 1;
+    position: relative;
+    left: -50px;
+    top: -50px;
+}
+
+.section#instagram h1 {
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.section#instagram p{
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* animations */
+
+@keyframes switcher-animation {
+    from {
+        left: -200%;
+        opacity: 1;
+    }
+    to {
+        left: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes floating-image {
+    0% {
+        /* margin-top:5px ; */
+        border: 40px solid #00000088;
+    }
+    50% {
+        /* margin:-10px ;  */
+        border: 40px solid #00000015;
+    }
+    100% {
+        /* margin-top:5px ; */
+        border: 40px solid #00000088;
+    }
+}
