@@ -1,4 +1,5 @@
 // main js file to controll project 
+alert("salam");
 var actionPromise = true;
 var papersController = document.getElementById("papers-controller");
 var pageCounter = 0;
